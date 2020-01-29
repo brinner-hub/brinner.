@@ -8,7 +8,9 @@
 输出: 1
 
 C语言解决办法
------------
+--------
+```c
+
 int singleNumber(int* nums, int numsSize){
     if(numsSize==1){
         return nums[0];
@@ -19,6 +21,7 @@ int singleNumber(int* nums, int numsSize){
     }
     return a;
 }
+```
 
 收获
 ----------
