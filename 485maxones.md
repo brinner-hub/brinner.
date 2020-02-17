@@ -12,3 +12,29 @@
 ---------
 输入的数组只包含 0 和1。
 输入数组的长度是正整数，且不超过 10,000。
+
+C语言解决方案
+----------
+```cint findMaxConsecutiveOnes(int* nums, int numsSize){
+    int sum,k=0,m=0;
+    for(int i=0;i<numsSize;i++){
+        sum=1;
+        if(nums[i]==1){
+            for(int j=i+1;j<numsSize;j++){
+                if(nums[j]==1)
+                    sum++;
+                else
+                    break;
+            }
+        }
+        else{
+            m++;
+        }
+        if(sum>k)
+            k=sum;
+        if(m==numsSize)
+            k=0;
+    }
+    return k;
+}
+```
